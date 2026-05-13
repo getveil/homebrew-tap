@@ -5,13 +5,13 @@
 class Veil < Formula
   desc "Protect your secrets from AI coding agents via a local credential-injecting proxy"
   homepage "https://github.com/getveil/veil"
-  version "0.1.0-rc1"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/getveil/veil/releases/download/v0.1.0-rc1/veil_0.1.0-rc1_darwin_amd64.tar.gz"
-      sha256 "45a2b38688d8f104dafd69c8089b19017b700d78592ccffa999ee66c2070daa2"
+      url "https://github.com/getveil/veil/releases/download/v0.1.0/veil_0.1.0_darwin_amd64.tar.gz"
+      sha256 "899807328861bd98904cc0567b70930a1fc5f2ce40c23596c50789a3906a7f27"
 
       define_method(:install) do
         bin.install "veil"
@@ -21,8 +21,8 @@ class Veil < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/getveil/veil/releases/download/v0.1.0-rc1/veil_0.1.0-rc1_darwin_arm64.tar.gz"
-      sha256 "28801fd64fffe2d151be0aea89a316c3fc5a7b16cff3d36f2261dfc67083e368"
+      url "https://github.com/getveil/veil/releases/download/v0.1.0/veil_0.1.0_darwin_arm64.tar.gz"
+      sha256 "c6dd7a6044a75dca6bf22a11213529efeec28b858f455390db29ef8ca2bb9107"
 
       define_method(:install) do
         bin.install "veil"
@@ -35,8 +35,8 @@ class Veil < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getveil/veil/releases/download/v0.1.0-rc1/veil_0.1.0-rc1_linux_amd64.tar.gz"
-      sha256 "a9c74d3075cb81debe19bb190ae4a828aa7bb75b81c8ca58111b5559f6812293"
+      url "https://github.com/getveil/veil/releases/download/v0.1.0/veil_0.1.0_linux_amd64.tar.gz"
+      sha256 "23acf6f4b88c54da2842169822343785f91a92c57e24003a5da4ca90be1de1ea"
       define_method(:install) do
         bin.install "veil"
         bash_completion.install "completions/veil.bash" => "veil"
@@ -45,8 +45,8 @@ class Veil < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getveil/veil/releases/download/v0.1.0-rc1/veil_0.1.0-rc1_linux_arm64.tar.gz"
-      sha256 "1f35e2c1539ec9ff4adf20296bf99db68c396100430f9c5731c7b40e03f3e840"
+      url "https://github.com/getveil/veil/releases/download/v0.1.0/veil_0.1.0_linux_arm64.tar.gz"
+      sha256 "728be0c84d32b010de83e8b609aafd5b08e90ae52efafaf1ae6ea5a05c301cfc"
       define_method(:install) do
         bin.install "veil"
         bash_completion.install "completions/veil.bash" => "veil"
